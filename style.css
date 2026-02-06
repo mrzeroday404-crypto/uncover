@@ -1,4 +1,6 @@
-/* Norwester Font */
+/* =========================
+   Norwester Font
+========================= */
 @font-face {
   font-family: 'Norwester';
   src: url('https://fonts.cdnfonts.com/s/17879/norwester.woff') format('woff');
@@ -6,22 +8,28 @@
   font-style: normal;
 }
 
-/* CSS Variables */
+/* =========================
+   CSS Variables
+========================= */
 :root {
-  --bg-dark: #000;
-  --text-dark: #fff;
-  --bg-light: #fff;
-  --text-light: #000;
+  --bg-dark: #000000;
+  --text-dark: #ffffff;
+  --bg-light: #ffffff;
+  --text-light: #000000;
 }
 
-/* Reset */
+/* =========================
+   Reset
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base */
+/* =========================
+   Base
+========================= */
 body {
   min-height: 100vh;
   display: flex;
@@ -30,7 +38,9 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Themes */
+/* =========================
+   Themes
+========================= */
 body.dark {
   background: var(--bg-dark);
   color: var(--text-dark);
@@ -41,7 +51,9 @@ body.light {
   color: var(--text-light);
 }
 
-/* Header */
+/* =========================
+   Header
+========================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -56,6 +68,7 @@ header {
   font-size: 0.95rem;
 }
 
+/* Theme Toggle Button */
 button {
   background: none;
   border: none;
@@ -64,7 +77,9 @@ button {
   cursor: pointer;
 }
 
-/* Main */
+/* =========================
+   Main Content
+========================= */
 main {
   flex: 1;
   max-width: 700px;
@@ -88,7 +103,9 @@ p {
   margin-bottom: 2rem;
 }
 
-/* Buttons */
+/* =========================
+   Buttons (FIXED)
+========================= */
 .actions {
   display: flex;
   gap: 1rem;
@@ -100,27 +117,37 @@ p {
   text-decoration: none;
   padding: 0.6rem 1.5rem;
   border-radius: 999px;
-  background: currentColor;
-  color: var(--bg-dark);
   font-size: 0.9rem;
   transition: opacity 0.2s ease;
+  border: 1px solid currentColor;
 }
 
+/* Dark mode buttons */
+body.dark .btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Light mode buttons */
 body.light .btn {
-  color: var(--bg-light);
+  background: #000000;
+  color: #ffffff;
 }
 
 .btn:hover {
   opacity: 0.8;
 }
 
+/* Outline button */
 .btn.outline {
-  background: transparent;
+  background: transparent !important;
+  color: inherit !important;
   border: 1px solid currentColor;
-  color: inherit;
 }
 
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   padding: 1rem;
   text-align: center;
@@ -128,7 +155,9 @@ footer {
   opacity: 0.6;
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+========================= */
 @media (min-width: 600px) {
   h1 {
     font-size: 2.4rem;
