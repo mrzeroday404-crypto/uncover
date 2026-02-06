@@ -127,3 +127,43 @@ body.light .btn:not(.outline) { background: #000; color: #fff; }
 footer { padding: 2rem; text-align: center; font-size: 0.8rem; opacity: 0.5; }
 
 .separator { border: none; border-top: 1px solid rgba(128,128,128,0.2); margin: 2rem 0; }
+
+/* =========================
+   LinkedIn Section
+========================= */
+.linkedin-feature {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-family: 'Norwester', sans-serif;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.post-container {
+  max-width: 550px; /* LinkedIn posts look best at this width */
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background: #fff; /* Ensures post is readable before iframe loads */
+}
+
+/* Make it responsive for smaller screens */
+@media (max-width: 600px) {
+  .post-container {
+    max-width: 100%;
+  }
+}
+
+/* The separator you already had, adjusted for spacing */
+.separator {
+  border: none;
+  border-top: 1px solid rgba(128,128,128,0.2);
+  margin: 0 10%;
+}
