@@ -3,30 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mr Zeroday</title>
+  <title>Mr. Zeroday | Unmasking Truth</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body class="dark">
   <header>
     <div class="brand">Mr.Zeroday</div>
-    <button id="themeToggle" aria-label="Toggle theme">☀️</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="investigations.html">Investigations</a>
+      <button id="themeToggle" aria-label="Toggle theme">☀️</button>
+    </nav>
   </header>
 
   <main>
-    <h1>Unmasking Truth</h1>
-    <p>
-      Anonymous investigations exposing scams, fraud, and digital deception.
-    </p>
+    <section class="hero">
+      <h1>Unmasking Truth</h1>
+      <p class="subtitle">Anonymous investigations exposing scams, fraud, and digital deception.</p>
+      <div class="actions">
+        <a href="investigations.html" class="btn">View Investigations</a>
+        <a href="#about" class="btn outline">Learn More</a>
+      </div>
+    </section>
 
-    <div class="actions">
-      <a href="#" class="btn">Investigations</a>
-      <a href="#" class="btn outline">Contact</a>
-    </div>
+    <hr class="separator">
+
+    <section id="about" class="info-grid">
+      <div class="card">
+        <h3>🔍 What We Do</h3>
+        <ul>
+          <li>Investigate online scams & fraudulent schemes</li>
+          <li>Analyze suspicious platforms and services</li>
+          <li>Document patterns in social engineering</li>
+          <li>Publish evidence-based findings</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>🕶️ Why Anonymous?</h3>
+        <p>Anonymity allows us to focus on <strong>facts, not personalities</strong>. We avoid external pressure, protect our researchers, and ensure the work remains unbiased and safe from influence.</p>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <p>⚠️ <strong>Disclaimer:</strong> All content is for educational purposes. We do not provide legal advice. Verify findings independently.</p>
+    </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Mr Zeroday
+    &copy; <span id="year"></span> Mr. Zeroday — Unmasking truth. One investigation at a time.
   </footer>
 
   <script src="script.js"></script>
