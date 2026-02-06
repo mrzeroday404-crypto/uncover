@@ -1,15 +1,17 @@
-const toggleBtn = document.getElementById("themeToggle");
+const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const yearSpan = document.getElementById('year');
 
-// Force dark mode on load
-body.classList.add("dark");
+// Set current year
+yearSpan.textContent = new Date().getFullYear();
 
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  body.classList.toggle("light");
-
-  toggleBtn.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+// Theme Toggle Logic
+themeToggle.addEventListener('click', () => {
+  if (body.classList.contains('dark')) {
+    body.classList.replace('dark', 'light');
+    themeToggle.textContent = '🌙';
+  } else {
+    body.classList.replace('light', 'dark');
+    themeToggle.textContent = '☀️';
+  }
 });
-
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
