@@ -47,40 +47,31 @@
 
     <section class="linkedin-feature">
   <div class="section-header">
-    <h2>Latest Update</h2>
+    <h2>Latest Updates</h2>
   </div>
-  
-  <div class="post-container">
-    <iframe 
-      src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7425661101536649217" 
-      height="600" 
-      width="100%" 
-      frameborder="0" 
-      allowfullscreen="" 
-      title="Embedded LinkedIn post">
-    </iframe>
-    </div>
-       <div class="post-container">
-    <iframe 
-      src="https://www.linkedin.com/embed/feed/update/urn:li:share:7429503031756521472" 
-      height="600" 
-      width="100%" 
-      frameborder="0" 
-      allowfullscreen="" 
-      title="Embedded LinkedIn post">
-    </iframe>
-    </div>
-  <div class="post-container">
-    <iframe 
-      src="https://www.linkedin.com/embed/feed/update/urn:li:share:7429502393995915265" 
-      height="600" 
-      width="100%" 
-      frameborder="0" 
-      allowfullscreen="" 
-      title="Embedded LinkedIn post">
-    </iframe>
+
+  <div class="carousel-container">
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">❮</button>
+    
+    <div class="carousel-track-container">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide active">
+          <iframe 
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7425661101536649217" 
+            height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post">
+          </iframe>
+        </div>
+        <div class="carousel-slide">
+          <iframe 
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7429503031756521472" 
+            height="600" width="100%" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post">
+          </iframe>
+        </div>
+      </div>
     </div>
 
+    <button class="carousel-btn next" id="nextBtn" aria-label="Next">❯</button>
+  </div>
 </section>
 
 <hr class="separator">
