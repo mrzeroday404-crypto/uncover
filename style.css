@@ -129,41 +129,125 @@ footer { padding: 2rem; text-align: center; font-size: 0.8rem; opacity: 0.5; }
 .separator { border: none; border-top: 1px solid rgba(128,128,128,0.2); margin: 2rem 0; }
 
 /* =========================
-   LinkedIn Section
+    LinkedIn Carousel Section
 ========================= */
 .linkedin-feature {
   padding: 4rem 1.5rem;
   text-align: center;
+  position: relative;
 }
 
 .section-header h2 {
   font-family: 'Norwester', sans-serif;
   font-size: 2rem;
-  margin-top: 0.5rem;
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.post-container {
-  max-width: 550px; /* LinkedIn posts look best at this width */
+/* The outer wrapper that keeps everything centered */
+.carousel-container {
+  position: relative;
+  max-width: 650px; /* Slightly wider than the post for button clearance */
   margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  background: #fff; /* Ensures post is readable before iframe loads */
+  display: flex;
+  align-items: center;
 }
 
-/* Make it responsive for smaller screens */
-@media (max-width: 600px) {
-  .post-container {
+/* The window that hides the non-active slides */
+.carousel-track-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #1a1a1a; /* Dark placeholder while loading */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Container for all slides */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Individual slide */
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff; /* LinkedIn posts are white */
+}
+
+.carousel-slide iframe {
+  border: none;
+  display: block;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.carousel-btn:hover {
+  background: #fff;
+  color: #000;
+  scale: 1.1;
+}
+
+.carousel-btn.prev {
+  left: -25px;
+}
+
+.carousel-btn.next {
+  right: -25px;
+}
+
+/* Hide buttons if there's only one post */
+.carousel-btn:disabled {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .carousel-container {
     max-width: 100%;
+  }
+  
+  /* Move buttons inside the frame on mobile so they don't clip off screen */
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 62, 62, 0.8); /* Semi-transparent on mobile */
   }
 }
 
-/* The separator you already had, adjusted for spacing */
+/* Optional: Smooth fade for the separator */
 .separator {
   border: none;
   border-top: 1px solid rgba(128,128,128,0.2);
-  margin: 0 10%;
+  margin: 3rem 10%;
 }
